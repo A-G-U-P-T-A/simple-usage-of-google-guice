@@ -9,10 +9,8 @@ public class CalculationModule {
         this.taxCalculator = taxCalculator;
     }
 
-    public int calculate() {
-        int tax = taxCalculator.calculateTax();
-
-        return tax;
+     int calculate() {
+         return taxCalculator.calculateTax();
     }
 
 }
