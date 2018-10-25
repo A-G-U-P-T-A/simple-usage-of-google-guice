@@ -16,7 +16,7 @@ public class Main {
                 else{
                     Injector guice = Guice.createInjector(new CalculationBinder(salary));
                     CalculationModule calculationModule = guice.getInstance(CalculationModule.class);
-                    System.out.println("Tax to be deducted from your salary is "+calculationModule.calculate(salary));
+                    System.out.println("Tax to be deducted from your salary is "+calculationModule.calculate());
                 }
             }
             catch(Exception e){
