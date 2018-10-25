@@ -3,7 +3,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 public class Main {
-    public static void main(String args[]) throws Exception{
+    public static void main(String args[]) {
         System.out.println("----Code Begins----\n\n");
         int salary;
         Scanner sc = new Scanner(System.in);
@@ -17,6 +17,7 @@ public class Main {
                     Injector guice = Guice.createInjector(new CalculationBinder(salary));
                     CalculationModule calculationModule = guice.getInstance(CalculationModule.class);
                     System.out.println("Tax to be deducted from your salary is "+calculationModule.calculate());
+                    System.out.println("Expected salary you get in hand is "+(salary-calculationModule.calculate()));
                 }
             }
             catch(Exception e){
